@@ -22,6 +22,25 @@ public class Main {
             }
         }
         System.out.println("Số sách có ngôn ngữ java là: " + countJavaLang);
+
+        int countCategoryFB = 0;
+
+        for (Book book : books) {
+            if (book instanceof FictionBook && ((FictionBook) book).getCategory().equals("Viễn tưởng 1")) {
+                countCategoryFB++;
+            }
+        }
+        System.out.println("Số sách fiction có category là Viễn tưởng 1 là: " + countCategoryFB);
+
+        int countFBPriceLess100 = 0;
+        for (Book book : books) {
+            if (book instanceof FictionBook && ((FictionBook)book).getPrice() < 100) {
+                countFBPriceLess100++;
+            }
+        }
+        System.out.println("Số sách viễn tuong có giá <100 là: " + countFBPriceLess100);
+
+
     }
 
 }
